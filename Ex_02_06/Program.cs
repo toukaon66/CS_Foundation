@@ -6,11 +6,13 @@ static class Program
     {
         Console.Write("数値を入力してください->");
         int number = int.Parse(System.Console.ReadLine());
-         if(number % 4 == 0)
-           Console.WriteLine("4の倍数です");
-           else
+        if (number % 4 == 0)
+        { 
+            Console.WriteLine("4の倍数です");
+        }
+        else
         {
-             Console.WriteLine("4の倍数ではありません");
+            Console.WriteLine("4の倍数ではありません");
         }
     }
 }
