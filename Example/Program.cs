@@ -136,7 +136,7 @@ static class Program
             }
         }
         Console.WriteLine("終了");*/
-        int i = 0;
+        /*int i = 0;
         while (i < 10)
         {
             if (i == 5)
@@ -146,6 +146,15 @@ static class Program
             Console.WriteLine($"i = {i}");
             i++;
         }
-        Console.WriteLine("終了");
+        Console.WriteLine("終了");*/
+        for (int i = 0; i < 6; i++)
+{
+    if (i == 2)
+    {
+        continue;
+    }
+    Console.WriteLine($"i = {i}");
+}
+Console.WriteLine("終了");
     }
 }
