@@ -172,7 +172,7 @@ static class Program
             return x + y;
         }*/
 
-        string day = "本日";
+        /*string day = "本日";
 string wether = "晴れ";
 // 可変数の引数を渡せる
 StringConcatenation(day, "は", wether, "です。");
@@ -188,6 +188,26 @@ static void StringConcatenation(params string[] strings)
         result += strings[i];
     }
     Console.WriteLine(result);
-}
+}*/
+
+/*namespace Example;
+
+// インスタンスの生成
+Warrior warrior = new();
+Monster monster = new();
+// フィールドに値を設定
+warrior.name = "ユータ";
+monster.name = "ゴブ";
+// メソッドの利用
+string meter1 = warrior.GetHpMeter();// 初期の戦士のHPを取得
+Console.WriteLine(meter1); // 戦士のHPを表示
+monster.Attack(warrior); // 魔物が戦士に攻撃
+string meter2 = warrior.GetHpMeter();// 攻撃を受けた後の戦士のHPを取得
+Console.WriteLine(meter2); // 戦士のHPを表示*/
+
+Warrior warrior = null;
+Console.WriteLine($"warrior={warrior}");
+warrior.Greet();//cはnullなのでエラー
+
     }
 }
