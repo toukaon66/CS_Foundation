@@ -147,14 +147,47 @@ static class Program
             i++;
         }
         Console.WriteLine("終了");*/
-        for (int i = 0; i < 6; i++)
+        /*for (int i = 0; i < 6; i++)
+        {
+            if (i == 2)
+            {
+                continue;
+            }
+            Console.WriteLine($"i = {i}");
+        }
+        Console.WriteLine("終了");*/
+
+        /*PrintHello();
+
+        int answer = Add(4, 5);
+        Console.WriteLine(answer);
+
+        void PrintHello()
+        {
+            Console.WriteLine("Hello, World!");
+        }
+
+        int Add(int x, int y)
+        {
+            return x + y;
+        }*/
+
+        string day = "本日";
+string wether = "晴れ";
+// 可変数の引数を渡せる
+StringConcatenation(day, "は", wether, "です。");
+/// <summary>
+/// 引数の文字列を結合して表示する
+/// </summary>
+/// <param name="strings">結合する文字列</param>
+static void StringConcatenation(params string[] strings)
 {
-    if (i == 2)
+    var result = "";
+    for (int i = 0; i < strings.Length; i++)
     {
-        continue;
+        result += strings[i];
     }
-    Console.WriteLine($"i = {i}");
+    Console.WriteLine(result);
 }
-Console.WriteLine("終了");
     }
 }
