@@ -4,6 +4,13 @@ static class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        string[] station = { "品川", "大崎", "五反田", "目黒", "恵比寿", "渋谷", "原宿", "代々木", "新宿" };
+        var count=0;
+    while(count < 9 )
+        {
+            Console.WriteLine($"{station[count]}");
+                        count=count+1;
+
+        }
     }
 }
