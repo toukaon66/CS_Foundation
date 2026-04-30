@@ -223,13 +223,18 @@ Console.WriteLine(warrior3.hp);
 
 // Console.WriteLine(warrior2.name);*/
 
-Warrior warrior = new Warrior();
+// Warrior warrior = new Warrior();
 
-warrior.name = "ユータ";
-warrior.hp = 10;// 別なクラスから見えないのでコンパイルエラーになる
+// warrior.name = "ユータ";
+// warrior.hp = 10;// 別なクラスから見えないのでコンパイルエラーになる
 
-warrior.Greet1();
-warrior.Greet2();// 別なクラスから見えないのでコンパイルエラーになる
+// warrior.Greet1();
+// warrior.Greet2();// 別なクラスから見えないのでコンパイルエラーになる
+
+// Warrior character = new();
+// character.Name = "戦士";
+// character.Hp = 10;//setアクセッサがprivateなので設定不可
+// character.Ap = 10;//読み取り専用プロパティなので設定不可
 
     }
 }

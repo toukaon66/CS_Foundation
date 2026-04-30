@@ -12,14 +12,14 @@ public class Item
     public int price; //単価
 
 
-  
+
     public void Print()
     {
         System.Console.WriteLine($"商品番号＝{itemNo}");
         System.Console.WriteLine($"商品名＝{itemName}");
         System.Console.WriteLine($"価格＝{price}");
     }
-       
+
     public void ChangePrice(int price)
     {
         this.price = price;
@@ -32,10 +32,4 @@ public class Item
     }
 
 
-public Item(int pitemNo,string pitemName,int pprice)
-    {
-        itemNo = pitemNo;
-        itemName = pitemName;
-        price = pprice;
-    }
 }
