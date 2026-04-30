@@ -6,29 +6,16 @@ namespace Example;
 public class Warrior
 {
     public string name;     // 名前を表すフィールド
-    public int hp = 10;     // 体力を表すフィールド
-    public int ap = 5;      // 攻撃力を表すフィールド
-    public int dp;          // 防御力を表すフィールド
-
-
-
- /// <summary>
-    /// デフォルトコンストラクタ
-    /// </summary>
-    public Warrior()
-    {
-        name = "よーすけ";
-        hp = 1;
-    }
-
+    protected int hp = 10;    // 体力を表すフィールド
     /// <summary>
-    /// コンストラクタ
+    /// 挨拶を行うメソッド
     /// </summary>
-    /// <param name="pname">nameフィールドに設定する値</param>
-    /// <param name="php">hpフィールドに設定する値</param>
-    public Warrior(string pname, int php)
+    public void Greet1()
     {
-        name = pname;
-        hp = php;
+        Console.WriteLine($"{name}:hello!");
+    }
+    private void Greet2()
+    {
+        Console.WriteLine($"{name}:hi!");
     }
 }

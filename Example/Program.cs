@@ -209,7 +209,7 @@ Console.WriteLine(meter2); // 戦士のHPを表示*/
 // Console.WriteLine($"warrior={warrior}");
 // warrior.Greet();//cはnullなのでエラー
 
-Warrior warrior = new("ユータ", 15);
+/*Warrior warrior = new("ユータ", 15);
 Console.WriteLine(warrior.name);
 Console.WriteLine(warrior.hp);
 
@@ -221,7 +221,15 @@ Warrior warrior3= new("コースケ",8);
 Console.WriteLine(warrior3.name);
 Console.WriteLine(warrior3.hp);
 
-// Console.WriteLine(warrior2.name);
+// Console.WriteLine(warrior2.name);*/
+
+Warrior warrior = new Warrior();
+
+warrior.name = "ユータ";
+warrior.hp = 10;// 別なクラスから見えないのでコンパイルエラーになる
+
+warrior.Greet1();
+warrior.Greet2();// 別なクラスから見えないのでコンパイルエラーになる
 
     }
 }
