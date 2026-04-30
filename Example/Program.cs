@@ -190,51 +190,58 @@ static void StringConcatenation(params string[] strings)
     Console.WriteLine(result);
 }*/
 
-/*namespace Example;
+        /*namespace Example;
 
-// インスタンスの生成
-Warrior warrior = new();
-Monster monster = new();
-// フィールドに値を設定
-warrior.name = "ユータ";
-monster.name = "ゴブ";
-// メソッドの利用
-string meter1 = warrior.GetHpMeter();// 初期の戦士のHPを取得
-Console.WriteLine(meter1); // 戦士のHPを表示
-monster.Attack(warrior); // 魔物が戦士に攻撃
-string meter2 = warrior.GetHpMeter();// 攻撃を受けた後の戦士のHPを取得
-Console.WriteLine(meter2); // 戦士のHPを表示*/
+        // インスタンスの生成
+        Warrior warrior = new();
+        Monster monster = new();
+        // フィールドに値を設定
+        warrior.name = "ユータ";
+        monster.name = "ゴブ";
+        // メソッドの利用
+        string meter1 = warrior.GetHpMeter();// 初期の戦士のHPを取得
+        Console.WriteLine(meter1); // 戦士のHPを表示
+        monster.Attack(warrior); // 魔物が戦士に攻撃
+        string meter2 = warrior.GetHpMeter();// 攻撃を受けた後の戦士のHPを取得
+        Console.WriteLine(meter2); // 戦士のHPを表示*/
 
-// Warrior warrior = null;
-// Console.WriteLine($"warrior={warrior}");
-// warrior.Greet();//cはnullなのでエラー
+        // Warrior warrior = null;
+        // Console.WriteLine($"warrior={warrior}");
+        // warrior.Greet();//cはnullなのでエラー
 
-/*Warrior warrior = new("ユータ", 15);
-Console.WriteLine(warrior.name);
-Console.WriteLine(warrior.hp);
+        /*Warrior warrior = new("ユータ", 15);
+        Console.WriteLine(warrior.name);
+        Console.WriteLine(warrior.hp);
 
-Warrior warrior2= new();
-warrior2.name="ユースケ";
-warrior2.hp=8;
+        Warrior warrior2= new();
+        warrior2.name="ユースケ";
+        warrior2.hp=8;
 
-Warrior warrior3= new("コースケ",8);
-Console.WriteLine(warrior3.name);
-Console.WriteLine(warrior3.hp);
+        Warrior warrior3= new("コースケ",8);
+        Console.WriteLine(warrior3.name);
+        Console.WriteLine(warrior3.hp);
 
-// Console.WriteLine(warrior2.name);*/
+        // Console.WriteLine(warrior2.name);*/
 
-// Warrior warrior = new Warrior();
+        // Warrior warrior = new Warrior();
 
-// warrior.name = "ユータ";
-// warrior.hp = 10;// 別なクラスから見えないのでコンパイルエラーになる
+        // warrior.name = "ユータ";
+        // warrior.hp = 10;// 別なクラスから見えないのでコンパイルエラーになる
 
-// warrior.Greet1();
-// warrior.Greet2();// 別なクラスから見えないのでコンパイルエラーになる
+        // warrior.Greet1();
+        // warrior.Greet2();// 別なクラスから見えないのでコンパイルエラーになる
 
-// Warrior character = new();
-// character.Name = "戦士";
-// character.Hp = 10;//setアクセッサがprivateなので設定不可
-// character.Ap = 10;//読み取り専用プロパティなので設定不可
+        // Warrior character = new();
+        // character.Name = "戦士";
+        // character.Hp = 10;//setアクセッサがprivateなので設定不可
+        // character.Ap = 10;//読み取り専用プロパティなので設定不可
+
+
+        Human human = new();
+        string s = human.ToString();
+        Console.WriteLine(s);
+        object o = human;
+        Console.WriteLine(o.Equals(human));
 
     }
 }
