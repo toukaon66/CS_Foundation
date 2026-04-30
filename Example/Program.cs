@@ -205,9 +205,23 @@ monster.Attack(warrior); // 魔物が戦士に攻撃
 string meter2 = warrior.GetHpMeter();// 攻撃を受けた後の戦士のHPを取得
 Console.WriteLine(meter2); // 戦士のHPを表示*/
 
-Warrior warrior = null;
-Console.WriteLine($"warrior={warrior}");
-warrior.Greet();//cはnullなのでエラー
+// Warrior warrior = null;
+// Console.WriteLine($"warrior={warrior}");
+// warrior.Greet();//cはnullなのでエラー
+
+Warrior warrior = new("ユータ", 15);
+Console.WriteLine(warrior.name);
+Console.WriteLine(warrior.hp);
+
+Warrior warrior2= new();
+warrior2.name="ユースケ";
+warrior2.hp=8;
+
+Warrior warrior3= new("コースケ",8);
+Console.WriteLine(warrior3.name);
+Console.WriteLine(warrior3.hp);
+
+// Console.WriteLine(warrior2.name);
 
     }
 }

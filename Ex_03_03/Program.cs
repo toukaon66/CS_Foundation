@@ -13,10 +13,13 @@ static class Program
         item.price = int.Parse(System.Console.ReadLine());
 
         System.Console.Write("新しい単価を入力してください->");
-        item.price = int.Parse(System.Console.ReadLine());
+        int newprice = int.Parse(System.Console.ReadLine());
 
-
-        System.Console.Write("結果");
-        item.Print;
+        ChangePrice();
+        /* public void ChangePrice(int newprice)
+         {price=newprice;}
+         ChangePrice();現在「ChangePrice」という名前は存在しない*/
+        System.Console.WriteLine("結果");
+        item.Print();
     }
 }
