@@ -1,4 +1,4 @@
-namespace Ex_03_09;
+namespace Ex_03_09.Modules;
 
 public class NetAccount : Account
 {
@@ -14,7 +14,8 @@ public NetAccount(string AccountNo, string AccountName, int Balance, int Point)
 
 public override void Print()
     {
-        Console.WriteLine($"ポイント={Point}");
         base.Print();
+        Console.WriteLine($"ポイント={Point}");
+       
     }
 }

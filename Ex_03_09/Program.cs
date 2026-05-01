@@ -5,8 +5,6 @@ static class Program
 {
     static void Main(string[] args)
     {
-
-         
         System.Console.Write("口座番号を入力してください->");
         string AccountNo = System.Console.ReadLine();
         System.Console.Write("口座名義を入力してください->");
@@ -16,7 +14,7 @@ static class Program
         System.Console.Write("ポイントを入力してください->");
         int Point = int.Parse(System.Console.ReadLine());
         System.Console.Write("結果");
-        Netaccount netaccount=new Netaccount(AccountNo,AccountName,Balance,Point);
+        NetAccount netaccount=new NetAccount(AccountNo,AccountName,Balance,Point);
         netaccount.Print();
     }
 }

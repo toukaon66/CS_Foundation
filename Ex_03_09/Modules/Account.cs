@@ -1,4 +1,4 @@
-namespace Ex_03_09;
+namespace Ex_03_09.Modules;
 
 public class Account
 {
