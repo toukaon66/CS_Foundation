@@ -241,27 +241,39 @@ static void StringConcatenation(params string[] strings)
         // warrior.Name = "戦士";
         // warrior.Greet();
 
-       try
-{
-    int[] vals = null;
-    ArrayCalc arrayCalc = new ArrayCalc();
-    var sum = arrayCalc.Summarize(vals);
-    Console.WriteLine($"合計={0}", sum);
-}
-catch (IndexOutOfRangeException e)
-{
-    Console.WriteLine(e.Message);
-    Console.WriteLine("配列の誤ったアクセスによる例外");
-}
-catch (NullReferenceException e)
-{
-    Console.WriteLine(e.Message);
-    Console.WriteLine("値がNullの変数利用による例外");
-}
-catch (Exception e)
-{
-    Console.WriteLine(e.Message);
-    Console.WriteLine("その他の例外");
-}
+        //        try
+        // {
+        //     int[] vals = null;
+        //     ArrayCalc arrayCalc = new ArrayCalc();
+        //     var sum = arrayCalc.Summarize(vals);
+        //     Console.WriteLine($"合計={0}", sum);
+        // }
+        // catch (IndexOutOfRangeException e)
+        // {
+        //     Console.WriteLine(e.Message);
+        //     Console.WriteLine("配列の誤ったアクセスによる例外");
+        // }
+        // catch (NullReferenceException e)
+        // {
+        //     Console.WriteLine(e.Message);
+        //     Console.WriteLine("値がNullの変数利用による例外");
+        // }
+        // catch (Exception e)
+        // {
+        //     Console.WriteLine(e.Message);
+        //     Console.WriteLine("その他の例外");
+        // }
+
+
+        DateTime now = DateTime.Now;
+        Console.WriteLine($"現在日時:{now}");
+        Console.WriteLine($"曜日番号:{now.DayOfWeek}");
+        Console.WriteLine($"年月日:{now.Year}/{now.Month}/{now.Day}");
+        Console.WriteLine($"now.ToLongDateString():{now.ToLongDateString()}");
+        Console.WriteLine($"now.ToLongTimeString():{now.ToLongTimeString()}");
+        Console.WriteLine($"now.ToShortDateString():{now.ToShortDateString()}");
+        Console.WriteLine($"now.ToShortTimeString():{now.ToShortTimeString()}");
+        DateTime after = now.AddDays(40);
+        Console.WriteLine($"after.ToShortDateString():{after.ToShortDateString()}");
     }
 }
