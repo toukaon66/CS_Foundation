@@ -237,11 +237,9 @@ static void StringConcatenation(params string[] strings)
         // character.Ap = 10;//読み取り専用プロパティなので設定不可
 
 
-        Human human = new();
-        string s = human.ToString();
-        Console.WriteLine(s);
-        object o = human;
-        Console.WriteLine(o.Equals(human));
+        var warrior = new Warrior();
+        warrior.Name = "戦士";
+        warrior.Greet();
 
     }
 }
