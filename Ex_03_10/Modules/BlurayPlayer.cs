@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Ex_03_10.Modules
 {
-    public class BlurayPlayer
+    public class BlurayPlayer:Player
     {
         public BlurayPlayer(string Media):base(Media)
         {}
