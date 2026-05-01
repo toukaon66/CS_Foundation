@@ -15,7 +15,7 @@ static class Program
         item.price = int.Parse(System.Console.ReadLine());
         
         System.Console.WriteLine("結果");
-        Item.Print();
+        item.Print();
        
     }
 }
