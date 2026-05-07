@@ -1,4 +1,6 @@
-﻿namespace Example;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+namespace Example;
 
 static class Program
 {
@@ -223,57 +225,21 @@ static void StringConcatenation(params string[] strings)
 
         // Console.WriteLine(warrior2.name);*/
 
-        // Warrior warrior = new Warrior();
-
-        // warrior.name = "ユータ";
-        // warrior.hp = 10;// 別なクラスから見えないのでコンパイルエラーになる
-
-        // warrior.Greet1();
-        // warrior.Greet2();// 別なクラスから見えないのでコンパイルエラーになる
-
-        // Warrior character = new();
-        // character.Name = "戦士";
-        // character.Hp = 10;//setアクセッサがprivateなので設定不可
-        // character.Ap = 10;//読み取り専用プロパティなので設定不可
 
 
-        // var warrior = new Warrior();
-        // warrior.Name = "戦士";
-        // warrior.Greet();
+        var item = new Item() { Id = 100, Name = "みかん", Price = 150 };
 
-        //        try
-        // {
-        //     int[] vals = null;
-        //     ArrayCalc arrayCalc = new ArrayCalc();
-        //     var sum = arrayCalc.Summarize(vals);
-        //     Console.WriteLine($"合計={0}", sum);
-        // }
-        // catch (IndexOutOfRangeException e)
-        // {
-        //     Console.WriteLine(e.Message);
-        //     Console.WriteLine("配列の誤ったアクセスによる例外");
-        // }
-        // catch (NullReferenceException e)
-        // {
-        //     Console.WriteLine(e.Message);
-        //     Console.WriteLine("値がNullの変数利用による例外");
-        // }
-        // catch (Exception e)
-        // {
-        //     Console.WriteLine(e.Message);
-        //     Console.WriteLine("その他の例外");
-        // }
+        var jsonStr = JsonConvert.SerializeObject(item);
+        Console.WriteLine(jsonStr);
+
+        var item2 = JsonConvert.DeserializeObject<Item>(jsonStr);
+        Console.WriteLine(item2);
+
+        JObject jsonObj = JObject.Parse(jsonStr);
+        Console.WriteLine($"Id:{jsonObj["Id"]}");
+        Console.WriteLine($"Name:{jsonObj["Name"]}");
+        Console.WriteLine($"Price:{jsonObj["Price"]}");
 
 
-        DateTime now = DateTime.Now;
-        Console.WriteLine($"現在日時:{now}");
-        Console.WriteLine($"曜日番号:{now.DayOfWeek}");
-        Console.WriteLine($"年月日:{now.Year}/{now.Month}/{now.Day}");
-        Console.WriteLine($"now.ToLongDateString():{now.ToLongDateString()}");
-        Console.WriteLine($"now.ToLongTimeString():{now.ToLongTimeString()}");
-        Console.WriteLine($"now.ToShortDateString():{now.ToShortDateString()}");
-        Console.WriteLine($"now.ToShortTimeString():{now.ToShortTimeString()}");
-        DateTime after = now.AddDays(40);
-        Console.WriteLine($"after.ToShortDateString():{after.ToShortDateString()}");
     }
 }
